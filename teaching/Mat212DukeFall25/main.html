@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Math 212 — Multivariable Calculus (Duke University)</title>
+    <meta
+      name="description"
+      content="Template course website for Math 212 (Multivariable Calculus) at Duke University."
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111827;
+        --muted: #6b7280;
+        --link: #1d4ed8;
+        --link-hover: #1e40af;
+        --border: #e5e7eb;
+        --card: #f8fafc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
+      }
+
+      .container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Header/Nav fixed */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: saturate(180%) blur(8px);
+        border-bottom: 1px solid var(--border);
+        z-index: 1000;
+      }
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 12px 20px;
+      }
+      .course-title {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.3;
+      }
+      nav a {
+        display: inline-block;
+        margin-left: 10px;
+        padding: 8px 10px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--text);
+        border: 1px solid transparent;
+      }
+      nav a:hover,
+      nav a:focus {
+        background: var(--card);
+        border-color: var(--border);
+        color: var(--link-hover);
+      }
+
+      /* Add top padding so content not hidden */
+      main {
+        padding-top: 80px;
+      }
+
+      /* Sections */
+      main section {
+        padding: 28px 0;
+      }
+      h2 {
+        margin: 0 0 10px 0;
+        font-size: 20px;
+        border-bottom: 2px solid var(--border);
+        padding-bottom: 6px;
+      }
+      p {
+        margin: 0 0 12px 0;
+      }
+      a {
+        color: var(--link);
+      }
+      a:hover {
+        color: var(--link-hover);
+      }
+
+      /* Overview list */
+      dl {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 6px 16px;
+      }
+      dt {
+        color: var(--muted);
+      }
+      dd {
+        margin: 0;
+      }
+
+      /* Schedule table */
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--card);
+      }
+      th,
+      td {
+        padding: 10px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+        font-weight: 600;
+        background: #fff;
+      }
+      tr:last-child td {
+        border-bottom: 0;
+      }
+      code {
+        background: #f2f4f7;
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+
+      /* Callouts */
+      .note {
+        border-left: 4px solid var(--link);
+        background: #eef2ff;
+        padding: 10px 12px;
+        border-radius: 8px;
+      }
+
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 22px 0;
+        color: var(--muted);
+      }
+
+      @media (max-width: 640px) {
+        .course-title {
+          font-size: 18px;
+        }
+        dl {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#overview" class="sr-only">Skip to content</a>
+
+    <header>
+      <div class="topbar">
+        <h1 class="course-title">Math 212 — Multivariable Calculus (Fall 2025)</h1>
+        <nav aria-label="Sections">
+          <a href="#overview">OVERVIEW</a>
+          <a href="#schedule">SCHEDULE</a>
+          <a href="#policies">POLICIES</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- OVERVIEW -->
+      <section id="overview" aria-labelledby="overview-heading">
+        <h2 id="overview-heading">Overview</h2>
+        <dl>
+          <dt>Class Meetings</dt>
+          <dd>
+            Days & Time: <b>TuTh 8:30AM-9:45AM</b>; Room: <b>Physics 259</b>
+          </dd>
+          <dt>Instructor</dt>
+          <dd>
+            <b>Shuchen Zhu</b> (<a href="mailto:shuchen.zhu@duke.edu"
+              >shuchen.zhu@duke.edu</a
+            >)
+          </dd>
+          <dt>Office Hours</dt>
+          <dd><b>After class</b> (or by appointment)</dd>
+          <dt>Grader</dt>
+          <dd>
+            Ben Mei-Dan (<a href="mailto:ben.mei-dan@duke.edu"
+              >ben.mei-dan@duke.edu</a
+            >)
+          </dd>
+          <!-- <dt>Canvas</dt>
+          <dd>
+            <a href="#">Course Canvas page</a> (assignments, grades,
+            discussions)
+          </dd> -->
+          <dt>Textbook</dt>
+          <dd>
+            <ul>
+              <li>
+                <i>Multivariable Calculus 6th edition</i> by Edwards and Penney
+              </li>
+            </ul>
+          </dd>
+          <dt>Description</dt>
+          <dd>
+            Partial differentiation, multiple integrals, and topics in
+            differential and integral vector calculus, including Green's
+            theorem, the divergence theorem, and Stokes's theorem.
+          </dd>
+          <!-- <dt>Prerequisites</dt>
+          <dd>
+            Single-variable calculus (equivalent to Math 112/122) and basic
+            linear algebra.
+          </dd> -->
+          <dt>Grading</dt>
+          <dd>
+            <ul>
+              <li>Weekly Homework: <b>50%</b></li>
+              <!-- <li>Quizzes: <b>10%</b></li> -->
+              <li>Midterm 1: <b>15%</b></li>
+              <li>Midterm 2: <b>15%</b></li>
+              <li>Final Exam: <b>20%</b> (Dec 15 9:00AM - 12:00PM)</li>
+            </ul>
+          </dd>
+        </dl>
+      </section>
+
+      <!-- SCHEDULE -->
+      <section id="schedule" aria-labelledby="schedule-heading">
+        <h2 id="schedule-heading">Schedule</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 70px">Week</th>
+                <th style="width: 120px">Date</th>
+                <th>Topic</th>
+                <!-- <th>Slides/Notes</th> -->
+                <th>Reading</th>
+                <th>Homework</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Aug 26</td>
+                <td>Vectors and geometry in ℝ<sup>3</sup></td>
+                <!-- <td><a href="#">PDF</a></td> -->
+                <td>Edwards 12.1–12.3</td>
+                <td>HW1 out (due Sep 2)</td>
+              </tr>
+              <!-- More weeks here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- POLICIES -->
+      <section id="policies" aria-labelledby="policies-heading">
+        <h2 id="policies-heading">Course Policies</h2>
+        <h3>Academic Integrity</h3>
+        <p>
+          Academic honesty is taken very seriously, in line with Duke
+          University's Honor System. For problem sets, you may discuss ideas
+          with others or use outside resources, but you must write your own
+          solutions as if you were taking an exam. For each problem, list all
+          collaborators and all references or online tools you used (including
+          ChatGPT or other AIs). Do not submit work you do not understand. I may
+          ask you to explain any part of your submission; if you cannot show
+          understanding, you will receive no credit and may be reported to the
+          Honor Council.
+        </p>
+
+        <!-- <h3>Collaboration</h3>
+        <p>
+          Unless stated otherwise, you may work in small groups (up to three).
+          Write up your own work and cite help.
+        </p> -->
+
+        <h3>Grading</h3>
+        <p>
+          Course grades will be determined by participation, problem sets, and
+          exams. There will be weekly homeworks and they are due at the beginning of class. Late work will be
+          penalized 10% per day for up to three days. After three days, late
+          submissions will not be accepted without prior approval. It is
+          important that you understand and agree with the grades you receive on
+          assignments and exams. If a score is unclear, please contact me to
+          discuss how it was determined. To protect your privacy, these
+          discussions will take place during office hours or by appointment.
+        </p>
+        <p>
+          Given the pace of the course, it is essential that you review the
+          material on your own soon after we cover it in class, using both your
+          notes and the textbook. Begin problem sets as soon as they are posted.
+          You may need multiple sessions to complete them, so do not wait until
+          the last minute.
+        </p>
+      </section>
+    </main>
+
+    <!-- <footer>
+      <div class="container">
+        <span id="updated"></span>
+      </div>
+    </footer> -->
+
+    <!-- <script>
+      document.getElementById("updated").textContent =
+        "Last updated: " + new Date().toLocaleDateString();
+    </script> -->
+  </body>
+</html>

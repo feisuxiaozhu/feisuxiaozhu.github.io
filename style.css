@@ -1,0 +1,129 @@
+:root {
+  --bg: #ffffff;
+  --text: #111827; /* gray-900 */
+  --muted: #6b7280; /* gray-500 */
+  --link: #1d4ed8; /* blue-700 */
+  --link-hover: #1e40af; /* blue-800 */
+  --card: #f8fafc; /* slate-50 */
+  --border: #e5e7eb; /* gray-200 */
+  --accent: #0ea5e9; /* sky-500 */
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 12px 24px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand img {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+.brand h1 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0;
+}
+.brand .subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 2px 0 0 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+nav a:hover,
+nav a:focus {
+  color: var(--link-hover);
+  background: var(--card);
+  border-color: var(--border);
+  outline: none;
+}
+
+/* Sections */
+main { padding-top: 100px; }
+section { padding: 36px 0; }
+section h2 {
+  font-size: 22px;
+  margin: 0 0 12px 0;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 6px;
+}
+p { margin: 0 0 14px 0; }
+
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+
+/* Cards/Lists */
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.item {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 12px;
+}
+.item b { display: inline-block; margin-bottom: 4px; }
+.meta { color: var(--muted); font-size: 14px; }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  color: var(--muted);
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .brand img { width: 56px; height: 56px; }
+  .brand h1 { font-size: 22px; }
+}
