@@ -23,6 +23,12 @@ body {
   background: var(--bg);
 }
 
+@media (max-width: 640px) {
+  body {
+    padding-top: 150px; /* override for mobile */
+  }
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
