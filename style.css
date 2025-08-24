@@ -27,6 +27,7 @@ body {
   body {
     padding-top: 150px; /* override for mobile */
   }
+  html {scroll-padding-top: 175px;}
 }
 
 .container {
