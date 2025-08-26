@@ -19,7 +19,9 @@
         --card: #f8fafc;
       }
 
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
 
       body {
         margin: 0;
@@ -42,27 +44,39 @@
         text-align: center;
       }
 
-      main section { padding: 0px 0; }
+      main section {
+        padding: 10px 0;
+      }
 
       h2 {
-        margin: 0 0 10px 0;
+        margin: 5 0 10px 0;
         font-size: 20px;
         border-bottom: 2px solid var(--border);
         padding-bottom: 6px;
       }
 
-      p { margin: 0 0 12px 0; }
+      p {
+        margin: 0 0 12px 0;
+      }
 
-      a { color: var(--link); }
-      a:hover { color: var(--link-hover); }
+      a {
+        color: var(--link);
+      }
+      a:hover {
+        color: var(--link-hover);
+      }
 
       dl {
         display: grid;
         grid-template-columns: 160px 1fr;
         gap: 6px 16px;
       }
-      dt { color: var(--muted); }
-      dd { margin: 0; }
+      dt {
+        color: var(--muted);
+      }
+      dd {
+        margin: 0;
+      }
 
       .table-wrap {
         overflow-x: auto;
@@ -74,7 +88,8 @@
         border-collapse: collapse;
         background: var(--card);
       }
-      th, td {
+      th,
+      td {
         padding: 10px;
         border-bottom: 1px solid var(--border);
         vertical-align: top;
@@ -84,7 +99,9 @@
         font-weight: 600;
         background: #fff;
       }
-      tr:last-child td { border-bottom: 0; }
+      tr:last-child td {
+        border-bottom: 0;
+      }
 
       code {
         background: #f2f4f7;
@@ -106,14 +123,20 @@
       }
 
       @media (max-width: 640px) {
-        h1.course-title { font-size: 20px; }
-        dl { grid-template-columns: 1fr; }
+        h1.course-title {
+          font-size: 20px;
+        }
+        dl {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
   <body>
     <main class="container">
-      <h1 class="course-title">Math 212 — Multivariable Calculus (Fall 2025)</h1>
+      <h1 class="course-title">
+        Math 212 — Multivariable Calculus (Fall 2025)
+      </h1>
 
       <!-- OVERVIEW -->
       <section id="overview" aria-labelledby="overview-heading">
@@ -125,23 +148,40 @@
           </dd>
           <dt>Instructor</dt>
           <dd>
-            <b>Shuchen Zhu</b> (<a href="mailto:shuchen.zhu@duke.edu">shuchen.zhu@duke.edu</a>)
+            <b>Shuchen Zhu</b> (<a href="mailto:shuchen.zhu@duke.edu"
+              >shuchen.zhu@duke.edu</a
+            >)
           </dd>
           <dt>Office Hours</dt>
           <dd><b>After class</b> (or by appointment)</dd>
-          <dt>Grader</dt>
+          <dt>Graders</dt>
           <dd>
-            Ben Mei-Dan (<a href="mailto:ben.mei-dan@duke.edu">ben.mei-dan@duke.edu</a>)
+            Ben Mei-Dan (<a href="mailto:ben.mei-dan@duke.edu"
+              >ben.mei-dan@duke.edu</a
+            >) and Kevin Zheng (<a href="mailto:kevin.zheng@duke.edu"
+              >kevin.zheng@duke.edu</a
+            >)
+          </dd>
+          <dt>Help Room Hours</dt>
+          <dd>
+            <a
+              href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu1_AsZYLRbYZL1_Pba9VXW15KVSif8_hwot8Qfa_2Bq4BR9g6urfSW1q3AVrgR5jpD51G0msb68Qm/pubhtml?gid=1701593628&single=true"
+              >Link</a
+            >
           </dd>
           <dt>Textbook</dt>
           <dd>
             <ul>
-              <li><i>Multivariable Calculus 6th edition</i> by Edwards and Penney</li>
+              <li>
+                <i>Multivariable Calculus 6th edition</i> by Edwards and Penney
+              </li>
             </ul>
           </dd>
           <dt>Description</dt>
           <dd>
-            Partial differentiation, multiple integrals, and topics in differential and integral vector calculus, including Green's theorem, the divergence theorem, and Stokes's theorem.
+            Partial differentiation, multiple integrals, and topics in
+            differential and integral vector calculus, including Green's
+            theorem, the divergence theorem, and Stokes's theorem.
           </dd>
           <dt>Grading</dt>
           <dd>
@@ -187,15 +227,34 @@
         <h2 id="policies-heading">Course Policies</h2>
         <h3>Academic Integrity</h3>
         <p>
-          Academic honesty is taken very seriously, in line with Duke University's Honor System. For problem sets, you may discuss ideas with others or use outside resources, but you must write your own solutions as if you were taking an exam. For each problem, list all collaborators and all references or online tools you used (including ChatGPT or other AIs). Do not submit work you do not understand. I may ask you to explain any part of your submission; if you cannot show understanding, you will receive no credit and may be reported to the Honor Council.
+          Academic honesty is taken very seriously, in line with Duke
+          University's Honor System. For problem sets, you may discuss ideas
+          with others or use outside resources, but you must write your own
+          solutions as if you were taking an exam. For each problem, list all
+          collaborators and all references or online tools you used (including
+          ChatGPT or other AIs). Do not submit work you do not understand. I may
+          ask you to explain any part of your submission; if you cannot show
+          understanding, you will receive no credit and may be reported to the
+          Honor Council.
         </p>
 
         <h3>Grading</h3>
         <p>
-          Course grades will be determined by participation, problem sets, and exams. There will be weekly homeworks and they are due at the beginning of class. Late work will be penalized 10% per day for up to three days. After three days, late submissions will not be accepted without prior approval. It is important that you understand and agree with the grades you receive on assignments and exams. If a score is unclear, please contact me to discuss how it was determined. To protect your privacy, these discussions will take place during office hours or by appointment.
+          Course grades will be determined by participation, problem sets, and
+          exams. There will be weekly homeworks and they are due at the
+          beginning of class. Late work will not be accepted.
+          It is important that you understand and agree
+          with the grades you receive on assignments and exams. If a score is
+          unclear, please contact me to discuss how it was determined. To
+          protect your privacy, these discussions will take place during office
+          hours or by appointment.
         </p>
         <p>
-          Given the pace of the course, it is essential that you review the material on your own soon after we cover it in class, using both your notes and the textbook. Begin problem sets as soon as they are posted. You may need multiple sessions to complete them, so do not wait until the last minute.
+          Given the pace of the course, it is essential that you review the
+          material on your own soon after we cover it in class, using both your
+          notes and the textbook. Begin problem sets as soon as they are posted.
+          You may need multiple sessions to complete them, so do not wait until
+          the last minute.
         </p>
       </section>
     </main>
