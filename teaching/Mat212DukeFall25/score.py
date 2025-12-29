@@ -36,17 +36,25 @@ midterm2 = np.array([
     63.33333333
 ])
 
-scores = midterm2
+final = np.array([
+    95, 105, 110, 97, 104,
+    88, 95, 94, 98, 54,
+    77, 61, 98, 87, 96,
+    98, 99, 73, 109, 78.5,
+    109, 106, 95, 82, 91
+])
+
+scores = final
 
 # bins = [55, 60, 65, 70, 75, 80, 85, 90, 95, 100.001]
-bins = [40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100.001]
+bins = [40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100,105,110]
 mean_val = np.mean(scores)
 median_val = np.median(scores)
 
 plt.hist(scores, bins=bins, edgecolor='black', rwidth=0.9)
 plt.xlabel("Score")
 plt.ylabel("Number of People")
-plt.title("Midterm 2")
+plt.title("Final")
 
 plt.axvline(mean_val, color='red', linestyle='dashed', linewidth=1.5, label=f"Average = {mean_val:.1f}")
 plt.axvline(median_val, color='blue', linestyle='dotted', linewidth=1.5, label=f"Median = {median_val:.1f}")
@@ -58,7 +66,7 @@ plt.axvline(median_val, color='blue', linestyle='dotted', linewidth=1.5, label=f
 # plt.axvline(60, color='brown', linestyle='solid', linewidth=1, label="D cutoff (60)")
 
 # Add shaded grade regions
-plt.axvspan(90, 100, color='green', alpha=0.15, label="Grade A")
+plt.axvspan(90, 110, color='green', alpha=0.15, label="Grade A")
 plt.axvspan(80, 90, color='orange', alpha=0.15, label="Grade B")
 plt.axvspan(70, 80, color='purple', alpha=0.15, label="Grade C")
 plt.axvspan(60, 70, color='brown', alpha=0.15, label="Grade D")
