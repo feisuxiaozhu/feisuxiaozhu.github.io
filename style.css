@@ -123,6 +123,46 @@ a:hover { color: var(--link-hover); }
 }
 .item b { display: inline-block; margin-bottom: 4px; }
 .meta { color: var(--muted); font-size: 14px; }
+.venue-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 6px;
+}
+.pub-venue {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.12);
+  color: #0f3d56;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+#publications .list {
+  gap: 10px;
+}
+
+#publications .item {
+  padding: 10px 12px;
+  line-height: 1.4;
+}
+
+#publications .item b {
+  margin-bottom: 2px;
+}
+
+#publications .meta,
+#publications .pub-venue,
+#publications .item a {
+  font-size: 13px;
+}
+
+#publications .venue-list {
+  gap: 4px;
+  margin: 2px 0 4px;
+}
 
 /* Footer */
 footer {
